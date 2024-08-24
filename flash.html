@@ -1,5 +1,53 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ESP32 Driver WebFlasher</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #f06, #ffba08, #00b4d8, #023e8a);
+            background-size: 400% 400%;
+            animation: gradientBackground 15s ease infinite;
+            color: white;
+            text-align: center;
+        }
+
+        @keyframes gradientBackground {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        esp-web-install-button {
+            --install-button-width: 200px;
+            --install-button-height: 50px;
+            --install-button-background: rgba(0, 0, 0, 0.7);
+            --install-button-color: white;
+            --install-button-border-radius: 25px;
+            --install-button-font-size: 1rem;
+            --install-button-hover-background: rgba(255, 255, 255, 0.2);
+        }
+
+        esp-web-install-button:hover {
+            transform: scale(1.1);
+            transition: transform 0.3s ease;
+        }
+    </style>
+</head>
 <body>
     <h1>ESP32 Driver WebFlasher</h1>
     <script type="module" src="https://unpkg.com/esp-web-tools@3.4.2/dist/web/install-button.js?module"></script>
