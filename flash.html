@@ -78,6 +78,10 @@
         .discord-link:hover {
             text-decoration: underline;
         }
+        esp-web-install-button {
+            margin: auto;
+  width: 50%;
+        }
     </style>
 </head>
 <body>
@@ -91,10 +95,6 @@
             <script type="module" src="https://unpkg.com/esp-web-tools@3.4.2/dist/web/install-button.js?module"></script>
             <br></br>
             <esp-web-install-button manifest="/manifest.json"></esp-web-install-button>
-            <div class="latest-commit" id="latest-commit">
-                <h3>Latest Commit</h3>
-                <p>Loading...</p>
-            </div>
             <a href="https://discord.gg/XXXXXXXX" class="discord-link" style="display: none;">Join the Discord server!</a>
         </section>
         <footer>
