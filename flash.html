@@ -5,21 +5,101 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ESP32 Driver WebFlasher</title>
     <style>
-
-    
-
-        h1 {
-            font-size: 3rem;
-            margin-bottom: 20px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
         }
 
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        #about {
+            margin-bottom: 20px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+        }
+
+       
+        
+        @keyframes pulse {
+          0% { box-shadow: 0 0 0 0 var(--hover); }
+        }
+        button {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .latest-commit {
+            margin-top: 20px;
+        }
+
+        .discord-link {
+            display: block;
+            margin-top: 20px;
+            color: #007bff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .discord-link:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
-    <h1>ESP32 Driver Flasher</h1>
-    <script type="module" src="https://unpkg.com/esp-web-tools@3.4.2/dist/web/install-button.js?module"></script>
-    <br></br>
-    <esp-web-install-button manifest="/manifest.json"></esp-web-install-button>
+    <header>
+        <h1>ESP32 Driver WebFlasher</h1>
+        <p>Made by Zynth with <3<p>
+    </header>
+
+    <main>
+        <section id="about">
+            <script type="module" src="https://unpkg.com/esp-web-tools@3.4.2/dist/web/install-button.js?module"></script>
+            <br></br>
+            <esp-web-install-button manifest="/manifest.json"></esp-web-install-button>
+            <div class="latest-commit" id="latest-commit">
+                <h3>Latest Commit</h3>
+                <p>Loading...</p>
+            </div>
+            <a href="https://discord.gg/XXXXXXXX" class="discord-link" style="display: none;">Join the Discord server!</a>
+        </section>
+        <footer>
+            <p>&copy; 2024 ESP32 Driver | Created by ZynthRodak</p>
+        </footer>
+    </main>
 </body>
 </html>
