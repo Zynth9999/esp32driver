@@ -4,15 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ESP32 Driver WebFlasher</title>
-    
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f0f0f0;
+        }
+        .container {
+            text-align: center;
+            padding: 30px;
+            background-color: white;
+            box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+            border-radius: 15px;
+            max-width: 90%;
+            width: 400px;
+        }
+        h1 {
+            margin-top: 0;
+        }
+        p {
+            margin-bottom: 20px;
+        }
+        esp-web-install-button {
+            display: inline-block;
+            width: 100%;
+            height: auto;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <h1>ESP32 Driver WebFlasher</h1>
-        <p>Made by Zynth with <3<p>
-    </header>
-            <script type="module" src="https://unpkg.com/esp-web-tools@3.4.2/dist/web/install-button.js?module"></script>
-            <br></br>
-            <esp-web-install-button manifest="/manifest.json" style="width:75%; height: 50%;"></esp-web-install-button>
+    <div class="container">
+        <header>
+            <h1>ESP32 Driver WebFlasher</h1>
+            <p>Made by Zynth with &lt;3</p>
+        </header>
+        <script type="module" src="https://unpkg.com/esp-web-tools@3.4.2/dist/web/install-button.js?module"></script>
+        <esp-web-install-button manifest="/manifest.json"></esp-web-install-button>
+    </div>
 </body>
 </html>
